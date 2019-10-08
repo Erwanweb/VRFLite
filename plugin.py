@@ -185,7 +185,7 @@ class BasePlugin:
         # fetch all the devices from the API and scan for VR
 
         listinvr = []
-        devicesAPI = DomoticzAPI("type=devices&filter=temp&used=true&order=Name")
+        devicesAPI = DomoticzAPI("type=devices&filter=light&used=true&order=Name")
         if devicesAPI:
             for device in devicesAPI["result"]:  # parse the devices for temperature sensors
                 idx = int(device["idx"])
